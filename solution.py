@@ -7,7 +7,7 @@ chat_id = 875744266  # Ваш chat ID, не меняйте название пе
 def solution(control_sample, test_sample) -> bool:
     return (
         ttest_ind(
-            test_sample, control_sample, alternative="less", equal_var=True
+            test_sample, control_sample, alternative="less", equal_var=False
         ).pvalue
         < 0.01
     )
